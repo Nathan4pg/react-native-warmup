@@ -8,7 +8,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as React from 'react';
-import { ColorSchemeName, Pressable } from 'react-native';
+import { ColorSchemeName, Pressable, View, Text, TextInput } from 'react-native';
+import SearchBar from '../components/SearchBar/SearchBar';
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
@@ -82,6 +83,10 @@ function BottomTabNavigator() {
               />
             </Pressable>
           ),
+          headerTitle: () => (
+     
+              <SearchBar />
+          )
         })}
       />
       <BottomTab.Screen
